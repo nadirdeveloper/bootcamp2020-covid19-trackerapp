@@ -1,8 +1,24 @@
 import React, { Component } from 'react'
 import WorldReport from '../util/WorldReport';
 import PakistanReport from '../util/PakistanReport';
+import Axios from 'axios';
 export default class Home extends Component {
-    
+    state = {
+        allData: []
+    }
+    async componentDidMount(){
+        var getGlobalData = await this.fetchData();
+        this.setState({allData:getGlobalData})
+      }
+      fetchData = async () =>{
+        var fetchedReport = await fetch('https://covid-19.dataflowkit.com/v1',{
+            method: "GET",
+           
+        })
+       var fetchData = await fetchedReport.json()
+       console.log(fetchData)
+        return fetchData
+    }
     render() {
         return (
             <div className="home-content">
@@ -12,8 +28,8 @@ export default class Home extends Component {
                 <h1>COVID19 REACT TRACKER APP</h1>
                     </div>
                 </div>
-                <WorldReport /> 
-                <PakistanReport />
+                <WorldReport reports={this.state.allData} /> 
+                <PakistanReport reports={this.state.allData} />
                 
             </div>
         )

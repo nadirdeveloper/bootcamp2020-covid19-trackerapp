@@ -2,26 +2,18 @@ import React, { Component } from 'react'
 import Cards from './Cards';
 
 export default class WorldReport extends Component {
-    state = {
-        GlobalData: []
+   
+    changeToNum = (StringNum) =>{
+        var arryNum = StringNum.split(',');
+        var concatNum = arryNum.join("");
+        return parseInt(concatNum)
     }
-    async componentDidMount(){
-        const data = await this.fetchData();
-        const {Global} = data;
-        console.log(Global)
-        this.setState({GlobalData:Global});
-
-      }
-      fetchData = async () =>{
-        var fetchData = await fetch('https://api.covid19api.com/summary');
-            var fetched = await fetchData.json();
-            return fetched
-      } 
-    render() {  
-              
+    render() {
+       
+    console.log(this.props.reports[0])             
         return (
             <div className="container=cards ">
-                <Cards data={this.state.GlobalData} />
+                <Cards data={this.props.reports} changeNum={this.changeToNum} title="World"  />
             </div>
         )
     }

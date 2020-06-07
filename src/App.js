@@ -3,16 +3,17 @@ import NavBar from './components/layout/NavBar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {Contact,Home,Search,Stats} from './components/pages'
 import './App.css';
+import Footer from './components/util/Footer'
 export default class App extends Component {
-async componentDidMount(){
-    const data = await this.fetchData();
-    const {Global} = data;
-  }
-  fetchData = async () =>{
-    var fetchData = await fetch('https://api.covid19api.com/summary');
-        var fetched = await fetchData.json();
-        return fetched
-  } 
+// async componentDidMount(){
+//     const data = await this.fetchData();
+//     const {GlobalData} = data;
+//   }
+//   fetchData = async () =>{
+//     var fetchData = await fetch('https://api.covid19api.com/summary');
+//         var fetched = await fetchData.json();
+//         return fetched
+//   } 
   render() {
     return (
      <Router>
@@ -21,10 +22,11 @@ async componentDidMount(){
          <Switch>
          <Route exact path="/" component={Home} />
          <Route exact path="/stats" component={Stats} />
-         <Route exact path="/" component={Search} />
-         <Route exact path="/" component={Contact} />
+         <Route exact path="/search" component={Search} />
+         <Route exact path="/contact" component={Contact} />
                 
          </Switch>
+         <Footer />
        </div>
      </Router>
     )

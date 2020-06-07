@@ -3,25 +3,35 @@ import Cards from './Cards';
 
 export default class WorldReport extends Component {
     state = {
-        GlobalData: []
+        allPakistanData: []
     }
     async componentDidMount(){
-        const data = await this.fetchData();
-        const {Countries} = data;
-        var PakistanCountry = Countries[126];
-        this.setState({GlobalData:PakistanCountry});
-
+        var getGlobalData = await this.fetchData();
+        let allGetData = []
+        allGetData.push(getGlobalData);
+        this.setState({allPakistanData:allGetData})
       }
       fetchData = async () =>{
-        var fetchData = await fetch('https://api.covid19api.com/summary');
-            var fetched = await fetchData.json();
-            return fetched
-      } 
-    render() {  
-              
+        var fetchedReport = await fetch('https://covid-19.dataflowkit.com/v1/pakistan',{
+            method: "GET",
+           
+        })
+       var fetchData = await fetchedReport.json()
+       console.log(fetchData)
+        return fetchData
+    }
+    changeToNum = (StringNum) =>{
+        var arryNum = StringNum.split(',');
+        var concatNum = arryNum.join("");
+        return parseInt(concatNum)
+    }
+    render() {
+       
+    console.log(this.props.reports[0])             
         return (
-            <div className="container ">
-                <Cards data={this.state.GlobalData} />
+            <div className="container=cards ">
+                <Cards data={this.state.allPakistanData} changeNum={this.changeToNum} title="Pakistan" />
+                
             </div>
         )
     }

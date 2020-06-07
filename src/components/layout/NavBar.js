@@ -19,14 +19,14 @@ export default function NavBar() {
             <Button color="inherit" component={Link} to="/">
                 Home
               </Button>
-              <Button color="inherit" component={Link} to="/login">
+              <Button color="inherit" component={Link} to="/stats">
                 STATS
               </Button>
               
-              <Button color="inherit" component={Link} to="/signup">
+              <Button color="inherit" component={Link} to="/search">
                 SEARCH
               </Button>
-              <Button color="inherit" component={Link} to="/signup">
+              <Button color="inherit" component={Link} to="/contact">
                 CONTACT
               </Button>
             </Fragment>
