@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import WorldReport from '../util/WorldReport';
 import PakistanReport from '../util/PakistanReport';
-import Axios from 'axios';
 export default class Home extends Component {
     state = {
         allData: []

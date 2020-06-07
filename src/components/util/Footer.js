@@ -3,7 +3,7 @@ import '../../App.css'
 export default function Footer() {
     return (
         <div className="footer-component">
-            <p>Madie With 🖤 By NADIR ALI</p>
+            <p>Madie With <span> 🖤 </span>By NADIR ALI</p>
         </div>
     )
 }
