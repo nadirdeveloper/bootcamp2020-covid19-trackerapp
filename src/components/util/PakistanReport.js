@@ -17,7 +17,6 @@ export default class WorldReport extends Component {
            
         })
        var fetchData = await fetchedReport.json()
-       console.log(fetchData)
         return fetchData
     }
     changeToNum = (StringNum) =>{
@@ -27,7 +26,6 @@ export default class WorldReport extends Component {
     }
     render() {
        
-    console.log(this.props.reports[0])             
         return (
             <div className="container=cards ">
                 <Cards data={this.state.allPakistanData} changeNum={this.changeToNum} title="Pakistan" />

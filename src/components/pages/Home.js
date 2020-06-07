@@ -15,7 +15,6 @@ export default class Home extends Component {
            
         })
        var fetchData = await fetchedReport.json()
-       console.log(fetchData)
         return fetchData
     }
     render() {

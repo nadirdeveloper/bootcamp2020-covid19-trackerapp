@@ -134,3 +134,18 @@ height: 40px;
 .contact-cards{
   height: 100vh;
 }
+.search-container{
+  min-height:100vh;
+  margin-top: 100px;
+}
+table td{
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+}
+.list-table{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 100px;
+}

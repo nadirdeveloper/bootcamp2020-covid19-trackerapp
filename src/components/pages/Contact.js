@@ -18,7 +18,7 @@ export default class Contact extends Component {
                     </Grid><Grid item xs={12} md={3} component={Card} className="card card-recovered">
                         <CardContent>
                             <Typography color="textSecondary" className="card-heading" gutterBottom>Current Email Address</Typography>
-                            <Typography color="textSecondary" className="card-date">nadirali.41006@gmail.co</Typography>
+                            <Typography color="textSecondary" className="card-date">nadirali.41006@gmail.com</Typography>
                         </CardContent>
                     </Grid><Grid item xs={12} md={3} component={Card} className="card card-death">
                         <CardContent>

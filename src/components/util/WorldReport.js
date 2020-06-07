@@ -10,7 +10,6 @@ export default class WorldReport extends Component {
     }
     render() {
        
-    console.log(this.props.reports[0])             
         return (
             <div className="container=cards ">
                 <Cards data={this.props.reports} changeNum={this.changeToNum} title="World"  />
