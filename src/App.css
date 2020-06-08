@@ -109,7 +109,7 @@ height: 40px;
   width: 900px!important;
   margin-top: 100px;
 }
-.graph-container{
+.graph-container,.linegraph-container{
   position: relative;
   height: 650px;
 }
@@ -134,9 +134,16 @@ height: 40px;
 .contact-cards{
   height: 100vh;
 }
-.search-container{
+.search-container,.search-cont{
   min-height:100vh;
   margin-top: 100px;
+}
+.search-input-cont{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 table td{
   border: 1px solid black;
@@ -148,4 +155,30 @@ table td{
   align-items: center; 
   justify-content: center; 
   margin-bottom: 100px;
+}
+.form-control{
+  margin: 100px;
+   min-width: 520px!important;
+}
+.search-input-cont select{
+  width: 400px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #3F51B5;
+  outline: none;
+}
+.search-input-cont select option{
+  width: 400px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.linegraph-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 800px;
+  /* justify-content: center; */
 }

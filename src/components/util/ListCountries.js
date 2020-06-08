@@ -42,7 +42,6 @@ export default class ListCountries extends Component {
                                     <td>{item["Total Deaths_text"]}</td>
                                    
                                 </tr>
-                                // console.log(item["Country_text"])
                             })}
                     </tbody>
                     <tfoot></tfoot>

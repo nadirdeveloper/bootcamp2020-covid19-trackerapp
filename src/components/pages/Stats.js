@@ -18,7 +18,6 @@ export default class Search extends Component {
         return fetchData
     }
     render() {
-        
         return (
             <div className="search-container">
                 <h3 className="sect-title">All Countries Statistics</h3>

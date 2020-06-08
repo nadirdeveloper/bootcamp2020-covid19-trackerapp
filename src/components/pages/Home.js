@@ -14,7 +14,7 @@ export default class Home extends Component {
             method: "GET",
            
         })
-       var fetchData = await fetchedReport.json()
+       var fetchData = await fetchedReport.json();
         return fetchData
     }
     render() {

@@ -7,7 +7,7 @@ export default function Graphs(props) {
             'Total Cases', 'Total Recovered Cases', 'Total Death Cases'],
         datasets: [
             {
-                label: 'Rainfall',
+                label: 'Cases',
                 backgroundColor: [
                     '#B21F00',
                     '#C9DE00',
@@ -43,11 +43,11 @@ export default function Graphs(props) {
                 title: {
                     display: true,
                     text: `Doughnut Of Statistic Of COVID19 Cases In ${props.title}`,
-                    fontSize: 20
+                    fontSize: 25
                 },
                 legend: {
                     display: true,
-                    position: 'right'
+                    position: 'right',
                 }
             }}
         />

@@ -20,9 +20,14 @@ export default class WorldReport extends Component {
         return fetchData
     }
     changeToNum = (StringNum) =>{
+    
         var arryNum = StringNum.split(',');
         var concatNum = arryNum.join("");
-        return parseInt(concatNum)
+        if(concatNum === "") {
+          return 0;
+        }else{
+          return parseInt(concatNum);
+        }
     }
     render() {
        
